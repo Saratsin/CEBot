@@ -26,6 +26,7 @@ def checkForUpdate():
             return None
 
         latestVersionInfo = appResultJson['app_versions'][0]
+        global app_version
         app_version = int(latestVersionInfo['version'])
         resultJson = json.dumps({
             'NewVersion' : latestVersionInfo['version'],
